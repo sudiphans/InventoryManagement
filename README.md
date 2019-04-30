@@ -1,27 +1,25 @@
-# InvManager7
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+# InventoryManagement
+This project (Inventory management system) is for managing computer Inventories. Developed on Angular 7 and Dot Net core 2.1 WebAPI (REST Full service).
 
-## Development server
+Requirements:
+1) Angular 7.
+2) Dot Net core 2.1.
+3) Keycloak (for authentication).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Project Details:
+This project is made to handle computer related inventories. It mainly has 03 modules.
+    a) Demand and Issue module to track transactions.
+    b) Computer Inventory module.
+    c) Peripheral Inventory Module.
+    
+Important Features:
 
-## Code scaffolding
+It will log all events/transactions related to inventory movement. It gives store manager and other IT administrators a holistic view of 
+inventory held by there oragnisations.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Tutorial:
+This project will also act as a tutorial for beginners to understand Angular 7, REST full services and KeyCloak SSO integration with Angular projects.
 
-## Build
+For query/feedback please mail me at sudiphansraj1@gmail.com.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
