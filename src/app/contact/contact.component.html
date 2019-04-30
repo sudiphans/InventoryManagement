@@ -1,0 +1,55 @@
+<h1>Computer List</h1>
+<div class="mat-elevation-z8">
+  <!-- mat table practice-->
+  
+  <mat-table [dataSource] = "dataSource">
+  <!-- The column defintions-->
+  
+  <ng-container matColumnDef="logBook">
+  <mat-header-cell *matHeaderCellDef>Log Book No</mat-header-cell>
+  
+  <mat-cell *matCellDef="let element">{{element.logBook}}</mat-cell>
+  
+  </ng-container>
+  
+  
+  <ng-container matColumnDef="serialNo">
+  
+    <mat-header-cell *matHeaderCellDef>Sl No</mat-header-cell>
+  
+    <mat-cell *matCellDef="let element">{{element.serialNo}}</mat-cell>
+    </ng-container>
+  
+     
+  <ng-container matColumnDef="itemMake">
+  
+    <mat-header-cell *matHeaderCellDef>Make</mat-header-cell>
+  
+    <mat-cell *matCellDef="let element">{{element.itemMake}}</mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="loanHolder">
+  
+      <mat-header-cell *matHeaderCellDef>LoanHolder</mat-header-cell>
+    
+      <mat-cell *matCellDef="let element">{{element.loanHolder}}</mat-cell>
+      </ng-container>
+
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+  
+    <mat-card *ngIf="isLoading" 
+    style="display: flex; justify-content: center; align-items: center">
+   <mat-progress-bar 
+     
+     mode="indeterminate">
+   </mat-progress-bar>
+ </mat-card>
+
+
+  </div>

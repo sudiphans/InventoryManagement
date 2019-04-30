@@ -1,0 +1,68 @@
+<h1>Reactive form Control(Sgt sudip)</h1>
+
+<div class="alert alert-success" role="alert" *ngIf="showMsg">
+        <div class="alert-items">
+            <div class="alert-item static">
+                <div class="alert-icon-wrapper">
+                    <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+                </div>
+                <span class="alert-text">Computer Detail succesfully saved.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="showError">
+            <div class="alert-items">
+                <div class="alert-item static">
+                    <div class="alert-icon-wrapper">
+                        <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+                    </div>
+                    <span class="alert-text">Error in saving your data. Please try again.</span>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+<form clrForm [formGroup]="computerModel" (ngSubmit)="onSubmit()" clrLayout="horizontal" >
+<clr-input-container>
+<label>Id:</label>
+<input clrInput type="text" formControlName="Id">
+</clr-input-container>
+<clr-input-container>
+<label>Log Book No:</label>
+<input clrInput type="text" formControlName="Lb_no">
+<clr-control-helper>Please enter Log Book Number. Refer Log Book allotment policy.</clr-control-helper>
+<clr-control-error *clrIfError="'pattern'">Expecting only number.</clr-control-error>
+<clr-control-error *clrIfError="'maxlength'">Only 6 numbers are allowed </clr-control-error>
+<clr-control-error *clrIfError="'required'">Field cannot be left blank</clr-control-error>
+</clr-input-container>
+<clr-input-container>
+<label>Serial No:</label>
+<input clrInput type="text" formControlName="sl_no">
+<clr-control-helper>Enter serial number of computer.</clr-control-helper>
+</clr-input-container>
+<clr-input-container>
+    <label>Make:</label><input clrInput type="text" formControlName="make">
+    <clr-control-helper>Please enter make of computer ag dell,hcl etc.</clr-control-helper>
+</clr-input-container>
+    <div clrForm formGroupName="CLoan">
+        <clr-input-container>
+<label>Id:</label>
+<input clrInput type="text" formControlName="Id">
+</clr-input-container>
+<clr-input-container>
+<label>Loan Holder(ser No):</label>
+<input clrInput type="text" formControlName="serNo">
+<clr-control-helper>Enter loan holder service number.</clr-control-helper>
+<clr-control-error>Expecting a number in this field.</clr-control-error>
+</clr-input-container>
+<button type="submit" [disabled]="!computerModel.valid" class="btn btn-primary">Submit</button>
+
+</div>
+
+</form>
