@@ -7,8 +7,7 @@ import {AppAuthGuard} from './app.authguard';
 
 
 const routes: Routes = [
-{
-  path:'', component:HomeComponent},
+{path:'', component:HomeComponent},
 {path:'about', component:AboutComponent,canActivate:[AppAuthGuard],data:{roles['SuperAdmin','storemanager']}},
 {path:'contact',component:ContactComponent,canActivate:[AppAuthGuard],data:{roles['SuperAdmin','storemanager']}}
 
